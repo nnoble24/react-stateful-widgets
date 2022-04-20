@@ -67,14 +67,14 @@ const [counter, setCounter] = useState(25)
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: counter % 2 ? 'royalblue': 'crimson', /* STEP 2 */
+    color: counter % 2 === 0 ? 'royalblue': 'crimson', /* STEP 2 */
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number {counter} is {counter % 2 ? "even" : "odd"} {/* STEP 3 */}
+        Number {counter} is {counter % 2 === 0 ? "even" : "odd"} {/* STEP 3 */}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
